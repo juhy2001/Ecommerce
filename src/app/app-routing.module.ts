@@ -1,3 +1,4 @@
+import { GuardGuard } from './services/guard.guard';
 import { OrderComponent } from './modules/order/order.component';
 import { PaymentComponent } from './modules/payment/payment.component';
 import { WishlistComponent } from './modules/home/wishlist/wishlist.component';
@@ -13,12 +14,13 @@ const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
-  {path:'home',component:HomeComponent},
+  {path:'home',component:HomeComponent, canActivate:[GuardGuard]},
   {path:'product-card',component:ProductCardComponent},
   {path:'cart',component:CartComponent},
   {path:'wishlist',component:WishlistComponent},
   {path:'payment',component:PaymentComponent},
-  {path:'order',component:OrderComponent}
+  {path:'order',component:OrderComponent},
+  {path:'**',component:LoginComponent}
 ];
 
 @NgModule({

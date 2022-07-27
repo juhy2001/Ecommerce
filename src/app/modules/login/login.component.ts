@@ -1,6 +1,6 @@
 import { ApiService } from './../../services/api.service';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   result!:any;
   loginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
+    email: new FormControl('', [Validators.required]),
+    password: new FormControl('',[Validators.required]),
   });
   newObject:any
 
@@ -40,18 +40,14 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('loginInfo', JSON.stringify(user));
 
 
-      // localStorage.setItem("myObject", JSON.stringify(user));
-
       if(user){
-        
-        // this.loginForm.reset();
+  
         this.router.navigate(['home'])
-        // localStorage.setItem('loginInfo',user)
         localStorage.setItem('email',this.loginForm.value.email)
         console.log(localStorage)
-        alert('Login is success');
+        // alert('Login is success');
       }else{
-        alert("User not found")
+        alert("Enter Valid Credentials")
       }
     },err=>{
       alert("Something went wrong")

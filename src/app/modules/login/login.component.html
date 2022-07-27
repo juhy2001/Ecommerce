@@ -8,17 +8,33 @@
               <div class="mb-md-5 mt-md-4 pb-5">
   
                 <h2 class="fw-bold mb-2 text-uppercase text-center" style="color:black;">Login</h2>
-                <p class="text-white-50 mb-5" style="color:black;">Please enter your login and password!</p>
+                <!-- <p class="text-white-50 mb-5" style="color:black;">Please enter your login and password!</p> -->
   
                 <div class="form-outline form-white mb-4">
-                  <label class="form-label" for="typeEmailX" style="color:black;">Email</label>
-                  <input formControlName="email" type="email" id="typeEmailX" class="form-control form-control-lg" />
+                  <label class="form-label" for="typeEmailX" style="color:black;">Email <span class="required-asterisk" style="color:red;">*</span></label>
+                  <input formControlName="email" type="email" id="typeEmailX" class="form-control form-control-lg"
+                  [ngClass]="loginForm.get('email')?.errors && loginForm.get('email')?.touched ? 'is-invalid' : '' " />
+
+                  <div *ngIf="
+                  loginForm.get('email')?.touched &&
+                  loginForm.get('email')?.invalid
+                  " class="invalid-feedback">
+                  Email is Required.
+                </div>
                   
                 </div>
   
                 <div class="form-outline form-white mb-4">
-                  <label class="form-label" for="typePasswordX" style="color:black;">Password</label>
-                  <input formControlName="password" type="password" id="typePasswordX" class="form-control form-control-lg" />
+                  <label class="form-label" for="typePasswordX" style="color:black;">Password <span class="required-asterisk" style="color:red;">*</span></label>
+                  <input formControlName="password" type="password" id="typePasswordX" class="form-control form-control-lg"
+                  [ngClass]="loginForm.get('password')?.errors && loginForm.get('password')?.touched ? 'is-invalid' : '' " />
+
+                  <div *ngIf="
+                  loginForm.get('password')?.touched &&
+                  loginForm.get('password')?.invalid
+                  " class="invalid-feedback">
+                  Password is required.
+                </div>
               
                 </div>
   

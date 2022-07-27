@@ -16,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http'
 import { ReactiveFormsModule } from '@angular/forms';
 import { PaymentComponent } from './modules/payment/payment.component';
 import { OrderComponent } from './modules/order/order.component';
+import { AnalyticsComponent } from './modules/analytics/analytics.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { OrderComponent } from './modules/order/order.component';
     LoginComponent,
     RegisterComponent,
     PaymentComponent,
-    OrderComponent
+    OrderComponent,
+    AnalyticsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,17 +1,14 @@
 .navbar{
     padding-left: 15%;
 
-    // .btn-outline-dark{
-    //     width: 25px;
-    //     height: 25px;
-    // }
     display: flex;
     justify-content: space-between;
-    // gap:20%;
+  
 
     .firstdiv{
-        width: 40%;
+        width: 20%;
         padding-left: 3%;
+    
     }
 
     .seconddiv{
@@ -20,5 +17,11 @@
         margin-right: 22%;
         border-radius: 20px;
         text-align: center;
+    }
+
+ 
+    .searchbox{
+        border-radius: 20px solid black;
+
     }
 }

@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+          "name": "dodo",
+          "email": "dodo@resto.com",
+          "password": "12345",
+          "role":"buyer",
+          "id": 1
+        },
+        {
+          "name": "bella",
+          "email": "bella@resto.com",
+          "password": "12345",
+          "role":"seller",
+          "id": 2
+        },
+        {
+          "name": "Leia Organa",
+          "id": 3
+        }
+    ]
+    }

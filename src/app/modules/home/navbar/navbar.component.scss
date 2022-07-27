@@ -1,0 +1,24 @@
+.navbar{
+    padding-left: 15%;
+
+    // .btn-outline-dark{
+    //     width: 25px;
+    //     height: 25px;
+    // }
+    display: flex;
+    justify-content: space-between;
+    // gap:20%;
+
+    .firstdiv{
+        width: 40%;
+        padding-left: 3%;
+    }
+
+    .seconddiv{
+        width: 10%;
+        padding: 5px;
+        margin-right: 22%;
+        border-radius: 20px;
+        text-align: center;
+    }
+}

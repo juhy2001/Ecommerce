@@ -1,0 +1,31 @@
+<div class="cards">
+<!-- <div class="card" style="width: 18rem;" *ngFor="let item of result ">
+    <img src="{{item.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p>{{item.category}}</p>
+      <p class="card-text">Price: ${{item.price}}</p>
+      <button type="button" class="btn btn-dark">Add to cart</button>
+    </div>
+  </div> -->
+  <div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="" style="width:100%">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <div class="wishlist">
+                <p><strong>Price:</strong> ${{item.price}}</p>
+        
+              <i  [style.color]="item.isSelected ? 'red' : 'FFFFFF'" (click)="addtowish(item)" class="fa fa-heart" aria-hidden="true"></i>
+
+              </div>
+                <button class="btn btn-outline-dark" (click)="addtocart(item)" >Add to cart</button>
+                <!-- <button class="btn btn-outline-dark" (click)="addtowish(item)" >Add to wish</button> -->
+            </div>
+        </ng-container>
+
+    </div>
+</div>
+</div>

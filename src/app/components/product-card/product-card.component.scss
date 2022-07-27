@@ -1,0 +1,51 @@
+// .cards{
+//     display: flex;  
+//     flex-wrap: wrap;
+//     padding: 5%;
+//     // background-color: yellow;
+    
+// }
+.item img {
+    width: 64px;
+}
+
+.item {
+    margin: 0px 15px;
+    text-align: center;
+}
+
+.item a:hover {
+    color: blue;
+}
+
+.card {
+    padding: 20px;
+    margin: 50px;
+
+    .wishlist{
+        display: flex;
+     justify-content: space-between;
+
+     .fa-heart{
+        cursor: pointer;
+        
+        // color: red;
+        // border-color: black;
+     }
+    //  .fa-heart:hover {
+    //     color: red;
+    // }
+    }
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
